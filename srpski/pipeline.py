@@ -2,8 +2,11 @@ from srpski.helper import *
 from srpski.spacyworks import *
 from nltk.tokenize import sent_tokenize, word_tokenize
 import nltk
+import re
+import random
 
 nltk.download('punkt')
+
 
 def tokenize(text):
     out = []
@@ -12,6 +15,28 @@ def tokenize(text):
         out += word_tokenize(sent)
         out.append("")
     return out
+
+
+def shuffle_text(text, separator="\n", header=False):
+
+    if not isinstance(text, str):
+        text = "\n\n".join(text)
+
+    if header:
+        lines = text.split("\n")
+        head = lines[0]
+        del lines[0]
+
+    text = re.sub(r"\n["+separator+"]+", "\n\n", text)
+
+    sents = text.split("\n\n")
+    random.shuffle(sents)
+    text = separator.join(sents)
+
+    if header:
+        text = head + "\n" + text
+
+    return text
 
 
 # can work with both string and array
@@ -392,3 +417,4 @@ magija = lexmagic
 lematizuj = lemmatize
 tagiraj = tag
 ucitaj_model = load_model
+promesaj = shuffle_text
