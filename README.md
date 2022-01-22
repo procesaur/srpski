@@ -19,9 +19,9 @@
 
 ## Instalacija
 ###### Linux and Windows 
-	`pip install -e git+https://github.com/procesaur/BEaSTagger.git#egg=beast`
+	`pip install -e git+https://github.com/procesaur/srpski.git`
 ###### *update*: 
-	`pip install -e git+https://github.com/procesaur/BEaSTagger.git#egg=beast --upgrade`
+	`pip install -e git+https://github.com/procesaur/srpski.git`
 ###### google colab: 
 	`!pip install git+https://github.com/procesaur/srpski.git`
 	
