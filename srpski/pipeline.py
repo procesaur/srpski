@@ -1,20 +1,11 @@
 from srpski.helper import *
 from srpski.spacyworks import *
-from nltk.tokenize import sent_tokenize, word_tokenize
-import nltk
 import re
 import random
 
-nltk.download('punkt')
-
 
 def tokenize(text):
-    out = []
-    sents = sent_tokenize(text)
-    for sent in sents:
-        out += word_tokenize(sent)
-        out.append("")
-    return out
+    return sentencize(text)
 
 
 def shuffle_text(text, separator="\n", header=False):
