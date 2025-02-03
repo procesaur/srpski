@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='srpskiNLP',
-    version='1.00',
+    version='1.01',
     packages=['srpski'],
     install_requires=[
         'spacy',
