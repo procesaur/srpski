@@ -335,5 +335,5 @@ def sentencize(text):
     sentences = sentence_split(tokenize(tokenizer, text), 'sr')
     for s in sentences:
         xs = [x[0] for x in s]
-        res.append("".join(xs))
+        res.append(xs)
     return res
